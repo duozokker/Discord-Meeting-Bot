@@ -1,1 +1,1 @@
-worker: node yourbotfile.js
+worker: python main.py
