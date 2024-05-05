@@ -72,35 +72,13 @@ async def join_blue(ctx):
     print("blue")
     await ctx.send(embed=embed)
 
-# List of mom jokes
-mom_jokes = [
-    "Die Mutter von Fin ist so weise, wenn sie an den Strand geht, kommt das Meer zu ihr, um sie um Rat zu fragen!",
-    "Warum hat die Mutter von Fin eine Leiter in die Bar gebracht? Sie hat gehört, dass die Getränke aufs Haus gehen!",
-    "Wie nennt man die Mutter von Fin, wenn sie vor einem Computer sitzt? Data Mom!",
-    "Die Mutter von Fin ist so stark, sie benutzt den Eiffelturm als Zahnstocher!",
-    "Warum kann die Mutter von Fin nicht Schach spielen? Bei jedem Zug sagt sie: 'König mich!'",
-    "Die Mutter von Fin ist so groß, wenn sie sich bückt, zeigt sie auf dem Radar!",
-    "Wie verdient die Mutter von Fin ihren Lebensunterhalt? Sie verkauft Schatten!",
-    "Warum trägt die Mutter von Fin eine Uhr auf jedem Arm? Eine ist für die Zeitzone, in der sie ist, die andere für die, in die sie passt!",
-    "Die Mutter von Fin ist so pünktlich, sie kam gestern schon für ihren Termin morgen!",
-    "Warum geht die Mutter von Fin nie zum Bowling? Sie wirft den Ball und die Erde dreht sich!",
-    "Die Mutter von Fin ist so magisch, sie kann Lasagne in eine Pizza verwandeln, indem sie sie umdreht!",
-    "Warum hat die Mutter von Fin den Job als Aufzugführerin verloren? Sie hat das Hochhaus in einen Bungalow verwandelt!",
-    "Die Mutter von Fin ist so kreativ, sie kann aus einem Tropfen Wasser eine Eisbahn machen!",
-    "Warum hat die Mutter von Fin eine Antenne auf dem Kopf? Sie empfängt Gedanken aus der Zukunft!",
-    "Die Mutter von Fin ist so alt, sie hat ein Autogramm von Moses!",
-    "Warum spielt die Mutter von Fin nie Verstecken? Weil, wenn sie sich versteckt, findet sie niemand mehr!",
-    "Die Mutter von Fin ist so schnell, sie kann um die Welt rennen und sich selbst in den Rücken treten!",
-    "Warum hat die Mutter von Fin einen Bagger im Garten? Um ihre Diätpillen auszugraben!",
-    "Die Mutter von Fin ist so klug, sie kann mit einem Schachbrett Tetris spielen!",
-    "Warum ist die Mutter von Fin immer in den Nachrichten? Weil sie so groß ist, sie passt nicht auf einen Bildschirm!"
-]
+@bot.command(name='reset', help='Reset all categories')
+async def reset(ctx):
+    for category in user_categories:
+        user_categories[category].clear()
+    embed = await update_embed()
+    await ctx.send(embed=embed)
 
-@bot.command(name='fin', help='Tell a random mom joke')
-async def tell_joke(ctx):
-    joke = random.choice(mom_jokes)
-    print("fin")
-    await ctx.send(joke)
 
 # Correctly register the error handler
 @bot.event
