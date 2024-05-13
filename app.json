@@ -6,8 +6,8 @@
     "keywords": ["meeting", "discord", "embed"],
 
     "env": {
-        "Discord-Token": {
-          "description": "Discord Bot Token",
+        "TOKEN": {
+          "description": "Your Discord Bot Token",
           "required": true
         }
       }
