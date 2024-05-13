@@ -1,0 +1,14 @@
+{
+    "name": "Discord Meeting Bot",
+    "description": "A Discord bot designed to facilitate meetings. It allows users to express their opinions or status through color-coded commands. The bot maintains a list of users in each category and can display this information in an embed.",
+    "repository": "https://github.com/duozokker/Discord-Meeting-Bot",
+    "logo": "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ac3c481f273141736_icon_clyde_black_RGB.png",
+    "keywords": ["meeting", "discord", "embed"],
+
+    "env": {
+        "Discord-Token": {
+          "description": "Discord Bot Token",
+          "required": true
+        }
+      }
+}

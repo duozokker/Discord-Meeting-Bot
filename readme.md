@@ -40,6 +40,9 @@ This project is a Discord bot designed to facilitate meetings. It allows users t
 
 ## Hosting on Heroku
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/duozokker/Discord-Meeting-Bot)
+
+
 This project is ready to be deployed on Heroku. The `Procfile` and `runtime.txt` files are already set up for deployment. You just need to create a new Heroku app, connect your GitHub repository, and deploy.
 
 When deploying to Heroku, you'll need to set the bot token as a config var. In your Heroku app dashboard, go to Settings, reveal Config Vars, and add a new config var with the key `TOKEN` and the value as your bot token.
